@@ -9,6 +9,8 @@ function mergeSort(arr){
     return merge(mergeSort(leftArr),mergeSort(rightArr))
 }
 
+
+
 function merge(leftArr,rightArr){
     const sortedArr = []
     while(leftArr.length && rightArr.length){
