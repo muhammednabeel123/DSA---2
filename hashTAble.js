@@ -48,5 +48,5 @@ table.display()
 
 console.log(table.get("name"));
 
-table.set("mane","Clark")
+table.set("mane","Clark ")
 table.display()
