@@ -146,4 +146,63 @@ let arr = [100000,32,4454,212,3213,44321]
 selection(arr)
 console.log(arr);
 
+function quick(arr){
 
+    if( arr.length < 2 ){
+        return arr
+    }
+
+    let pivot = arr[arr.length -1]
+    let left = []
+    let right = []
+
+    for(let i = 0; i<arr.length -1 ;i++){
+        if(arr[i] <= pivot ){
+            left.push(arr[i])
+        }
+        else{
+            right.push(arr[i])
+        }
+    }
+    return[...quick(left),pivot,...quick(right) ]
+
+
+}
+
+const arr1 = [20,10,60,30,70] 
+console.log(quick(arr1));
+
+class HashTable {
+    constructor(size){
+        this.table = new Array(size)
+        this.size = size
+    }
+
+
+    hash(key){
+        let total = 0
+        for(let i = 0;i<key.length;i++){
+            total += key.charCodeAt(i)
+        }
+    }
+
+    set(key,value){
+        index = this.hash(key)
+        this.table[index] = value
+    }
+}
+
+class queues {
+    constructor(){
+        this.items = {}
+        this.rear = 0
+        this.front = 0
+    }
+
+    enqueue(element){
+        this.item[this.rear] = element
+        this.rear ++ 
+
+    }
+
+}
